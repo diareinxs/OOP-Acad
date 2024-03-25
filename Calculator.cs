@@ -9,14 +9,22 @@
 //If Yes, procede with the First Step otherwise No end the vode.
 
 using System;
+
 namespace Calculator
-class Program
+{
+    class Program
     {
+        // Default Constructor
+  
+        {
+            // Constructor logic, if any, can be placed here
+        }
+
         static void Main(string[] args)
         {
             do
             {
-                double num1 = 0;
+                double num1 = 0; // Encapsulation: Variables num1, num2, and result are encapsulated within the Main method.
                 double num2 = 0;
                 double result = 0;
 
@@ -24,21 +32,35 @@ class Program
                 Console.WriteLine("\tCalculator Activity");
                 Console.WriteLine("\t-----------------------");
 
+                // Accepting input for number 1
                 Console.Write("Enter number 1: ");
-                num1 = Convert.ToDouble(Console.ReadLine());
+                if (!double.TryParse(Console.ReadLine(), out num1))
+                {
+                    Console.WriteLine("Invalid input. Please enter a valid number.");
+                    return;                 }
 
+                // Accepting input for number 2
                 Console.Write("Enter number 2: ");
-                num2 = Convert.ToDouble(Console.ReadLine());
+                if (!double.TryParse(Console.ReadLine(), out num2))
+                {
+                    Console.WriteLine("Invalid input. Please enter a valid number.");
+                    return; // Encapsulation: Control flow logic is encapsulated within the Main method same as the num1 variable
+                }
 
-                Console.WriteLine("Enter an operation to be use: ");
+                // Abstraction: The user interface and calculation logic are abstracted away from the user.
+                // Accepting input for operator
+                Console.WriteLine("Enter an operation to be used: ");
                 Console.WriteLine("\t+ : Add");
                 Console.WriteLine("\t- : Subtract");
                 Console.WriteLine("\t* : Multiply");
                 Console.WriteLine("\t/ : Divide");
-                Console.Write("Enter an operation to be use: ");
+                Console.Write("Enter an operation to be used: ");
+                string operation = Console.ReadLine();
 
+                // Polymorphism: Switch statement allows for different behavior based on the type of operation that the user has chosen.
 
-                switch (Console.ReadLine())
+                // Performing the calculation based on the operator
+                switch (operation)
                 {
                     case "+":
                         result = num1 + num2;
@@ -53,19 +75,28 @@ class Program
                         Console.WriteLine($"Your result: {num1} * {num2} = " + result);
                         break;
                     case "/":
+                        // Abstraction: Handling division by zero is abstracted away from the user.
+                        // Check for division by zero
+                        if (num2 == 0)
+                        {
+                            Console.WriteLine("Cannot divide by zero.");
+                            return; // Encapsulation: Control flow logic if the cannot divide by zero…
+                        }
                         result = num1 / num2;
                         Console.WriteLine($"Your result: {num1} / {num2} = " + result);
                         break;
                     default:
-                        Console.WriteLine("That was not a valid option");
-                        break;
+                        Console.WriteLine("That was not a valid operation.");
+                        return; // Encapsulation: Control flow logic if the operation is invalid.
                 }
+
+                // Encapsulation: Control flow logic is encapsulated within the Main method.
+                // Prompting the user to continue or exit
                 Console.Write("Would you like to continue? (Y = yes, N = No): ");
-            } while (Console.ReadLine().ToUpper() == "Y" or "yes");
+            } while (Console.ReadLine().ToUpper() == "Y" || Console.ReadLine().ToUpper() == "YES");
 
             Console.WriteLine("Thank you for using the calculator!!!");
             Console.ReadKey();
         }
     }
 }
-
