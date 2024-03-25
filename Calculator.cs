@@ -20,9 +20,9 @@ class Program
                 double num2 = 0;
                 double result = 0;
 
-                Console.WriteLine("------------------");
-                Console.WriteLine("Calculator Program");
-                Console.WriteLine("------------------");
+                Console.WriteLine("\t-----------------------");
+                Console.WriteLine("\tCalculator Activity");
+                Console.WriteLine("\t-----------------------");
 
                 Console.Write("Enter number 1: ");
                 num1 = Convert.ToDouble(Console.ReadLine());
@@ -30,12 +30,12 @@ class Program
                 Console.Write("Enter number 2: ");
                 num2 = Convert.ToDouble(Console.ReadLine());
 
-                Console.WriteLine("Enter an option: ");
+                Console.WriteLine("Enter an operation to be use: ");
                 Console.WriteLine("\t+ : Add");
                 Console.WriteLine("\t- : Subtract");
                 Console.WriteLine("\t* : Multiply");
                 Console.WriteLine("\t/ : Divide");
-                Console.Write("Enter an option: ");
+                Console.Write("Enter an operation to be use: ");
 
 
                 switch (Console.ReadLine())
@@ -61,9 +61,9 @@ class Program
                         break;
                 }
                 Console.Write("Would you like to continue? (Y = yes, N = No): ");
-            } while (Console.ReadLine().ToUpper() == "Y");
+            } while (Console.ReadLine().ToUpper() == "Y" or "yes");
 
-            Console.WriteLine("Bye!");
+            Console.WriteLine("Thank you for using the calculator!!!");
             Console.ReadKey();
         }
     }
