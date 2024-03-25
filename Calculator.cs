@@ -6,7 +6,7 @@
 //Input valid prompt the user to input another numerical value. Display an error message again when invalid.
 //When valid display the results:
 //When the results in displayed, ask the user if he wants to do another calculation again: 
-//If Yes, procede with the First Step otherwise No end the vode.
+//If Yes, procede with the First Step otherwise end the code.
 
 using System;
 
@@ -89,7 +89,7 @@ namespace Calculator
                 // Encapsulation: Control flow logic is encapsulated within the Main method.
                 // Prompting the user to continue or exit
                 Console.Write("Would you like to continue? (Y = yes, N = no): ");
-            } while (Console.ReadLine().ToUpper() == "Y" ||Console.ReadLine().ToUpper() == "yes") || Console.ReadLine().ToUpper() == "YES");
+            } while (Console.ReadLine().ToUpper() == "Y" || Console.ReadLine().ToUpper() == "yes") || Console.ReadLine().ToUpper() == "YES");
 
             Console.WriteLine("Thank you for using the calculator!!!");
             Console.ReadKey();
