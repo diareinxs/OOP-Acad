@@ -87,7 +87,7 @@ namespace Calculator
                 }
 
                 // Encapsulation: Control flow logic is encapsulated within the Main method.
-                // Prompting the user to continue or exit
+                // Asking the user to continue or exit
                 Console.Write("Would you like to continue? (Y = yes, N = no): ");
             } while (Console.ReadLine().ToUpper() == "Y" || Console.ReadLine().ToUpper() == "yes") || Console.ReadLine().ToUpper() == "YES");
 
