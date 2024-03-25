@@ -24,9 +24,9 @@ namespace Calculator
                 double num2 = 0;
                 double result = 0;
 
-                Console.WriteLine("\t-----------------------");
-                Console.WriteLine("\tCalculator Activity");
-                Console.WriteLine("\t-----------------------");
+                Console.WriteLine("-----------------------");
+                Console.WriteLine("Calculator Activity");
+                Console.WriteLine("-----------------------");
 
                 // Accepting input for number 1
                 Console.Write("Enter number 1: ");
@@ -43,7 +43,7 @@ namespace Calculator
                     return; // Encapsulation: Control flow logic is encapsulated within the Main method same as the num1 variable
                 }
 
-                // Abstraction: The user interface and calculation logic are abstracted away from the user.
+                // Abstraction: The user interface and calculation logic are abstracted away.
                 // Accepting input for operator
                 Console.WriteLine("Enter an operation to be used: ");
                 Console.WriteLine("\t+ : Add");
