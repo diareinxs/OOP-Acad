@@ -1,3 +1,5 @@
+//REGINE MAE G. HAMBIOL
+//BSIT2-2
 using System;
 
 namespace Calculator
@@ -96,7 +98,7 @@ namespace Calculator
     {
         static void Main(string[] args)
         { //polymorphism, create New instance...
-            //abtraction, calling the method used to start the program...
+            //abstraction, calling the method used to start the program...
             do
             {
                 Calculator calculator = new Calculator();
